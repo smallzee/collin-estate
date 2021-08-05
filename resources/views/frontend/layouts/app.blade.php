@@ -35,7 +35,7 @@
 
         {{-- SEARCH BAR --}}
         @include('frontend.partials.search')
-        
+
         {{-- MAIN CONTENT --}}
         <div class="main">
             @yield('content')

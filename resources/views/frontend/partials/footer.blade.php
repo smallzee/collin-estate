@@ -55,7 +55,7 @@
             @if(isset($footersettings[0]) && $footersettings[0]['footer'])
                 {{ $footersettings[0]['footer'] }}
             @else
-                © Developed By
+                © Developed By Oyewale Adeyemi Olakekan
             @endif
         </div>
     </div>
