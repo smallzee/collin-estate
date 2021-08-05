@@ -4,12 +4,13 @@
             <div class="nav-wrapper">
 
                 <a href="{{ route('home') }}" class="brand-logo">
-                    @if(isset($navbarsettings[0]) && $navbarsettings[0]['name'])
-                        {{ $navbarsettings[0]['name'] }}
-                    @else
-                        {{ env('APP_NAME') }}
-                    @endif
-                    <i class="material-icons left">location_city</i>
+                    {{--@if(isset($navbarsettings[0]) && $navbarsettings[0]['name'])--}}
+                        {{--{{ $navbarsettings[0]['name'] }}--}}
+                    {{--@else--}}
+                        {{--{{ env('APP_NAME') }}--}}
+                    {{--@endif--}}
+                    <img src="{{Storage::url('users/logo.jpg')}}" style="width: 100%; height: 65px;" alt="">
+
                 </a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger">
                     <i class="material-icons">menu</i>

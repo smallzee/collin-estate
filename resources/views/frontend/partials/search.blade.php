@@ -1,6 +1,10 @@
 
 <!-- SEARCH SECTION -->
 
+<style>
+
+</style>
+
 <section class="indigo darken-2 white-text center">
     <div class="container">
         <div class="row m-b-0">
