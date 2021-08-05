@@ -76,7 +76,7 @@
                 </div>
                 <div class="col s12 m4">
                     <div>
-                        <h4 class="left">&#8358; {{ $property->price }}</h4>
+                        <h4 class="left">&#8358; {{ number_format($property->price,2) }}</h4>
                         <button type="button" class="btn btn-small m-t-25 right disabled b-r-20"> For {{ $property->purpose }}</button>
                     </div>
                 </div>
@@ -220,13 +220,13 @@
                                 </div>
                             @endauth
 
-                            @guest 
+                            @guest
                                 <div class="comment-login">
                                     <h6>Please Login to comment</h6>
                                     <a href="{{ route('login') }}" class="btn indigo">Login</a>
                                 </div>
                             @endguest
-                            
+
                         </div>
                     </div>
 
@@ -267,7 +267,7 @@
                                         <input type="hidden" name="agent_id" value="{{ $property->user->id }}">
                                         <input type="hidden" name="user_id" value="{{ auth()->id() }}">
                                         <input type="hidden" name="property_id" value="{{ $property->id }}">
-                                            
+
                                         <div class="box">
                                             <input type="text" name="name" placeholder="Your Name">
                                         </div>
@@ -369,19 +369,19 @@
                 var rating = data.rating;
                 var property_id = <?php echo json_encode($property->id); ?>;
                 var user_id = <?php echo json_encode( auth()->id() ); ?>;
-                
+
                 $.post( "{{ route('property.rating') }}", { rating: rating, property_id: property_id, user_id: user_id }, function( data ) {
                     if(data.rating.rating){
                         M.toast({html: 'Rating: '+ data.rating.rating + ' added successfully.', classes:'green darken-4'})
                     }
                 });
             });
-            
+
 
             // COMMENT
             $(document).on('click','#commentreplay',function(e){
                 e.preventDefault();
-                
+
                 var commentid = $(this).data('commentid');
 
                 $('#procomment-'+commentid).empty().append(
@@ -390,7 +390,7 @@
                             @csrf
                             <input type="hidden" name="parent" value="1">
                             <input type="hidden" name="parent_id" value="`+commentid+`">
-                            
+
                             <textarea name="body" class="box" placeholder="Leave a comment"></textarea>
                             <input type="submit" class="btn indigo" value="Comment">
                         </form>

@@ -8,7 +8,7 @@
 
     <section class="section">
         <div class="container">
-            
+
             <div class="row">
                 <h4 class="section-heading">Properties</h4>
             </div>
@@ -68,23 +68,23 @@
                                 <h5>
                                     &#8358;{{ number_format($property->price,2) }}
                                     {{--<div class="right" id="propertyrating-{{$property->id}}"></div>--}}
-                                </h5>                                
+                                </h5>
                             </div>
                             <div class="card-action property-action">
                                 <span class="btn-flat">
                                     <i class="material-icons">check_box</i>
-                                    Bedroom: <strong>{{ $property->bedroom}}</strong> 
+                                    Bedroom: <strong>{{ $property->bedroom}}</strong>
                                 </span>
                                 <span class="btn-flat">
                                     <i class="material-icons">check_box</i>
-                                    Bathroom: <strong>{{ $property->bathroom}}</strong> 
+                                    Bathroom: <strong>{{ $property->bathroom}}</strong>
                                 </span>
                                 <span class="btn-flat">
                                     <i class="material-icons">check_box</i>
                                     Area: <strong>{{ $property->area}}</strong> Square Feet
                                 </span>
                                 <span class="btn-flat">
-                                    <i class="material-icons">comment</i> 
+                                    <i class="material-icons">comment</i>
                                     <strong>{{ $property->comments_count}}</strong>
                                 </span>
                             </div>
@@ -114,7 +114,7 @@
                 var elmt = element.rating;
                 var sum = 0;
                 for( var i = 0; i < elmt.length; i++ ){
-                    sum += parseFloat( elmt[i].rating ); 
+                    sum += parseFloat( elmt[i].rating );
                 }
                 var avg = sum/elmt.length;
                 if(isNaN(avg) == false){
