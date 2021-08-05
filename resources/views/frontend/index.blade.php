@@ -4,24 +4,24 @@
 
     <!-- SERVICE SECTION -->
 
-    <section class="section grey lighten-4 center">
-        <div class="container">
-            <div class="row">
-                <h4 class="section-heading">Services</h4>
-            </div>
-            <div class="row">
-                @foreach($services as $service)
-                    <div class="col s12 m4">
-                        <div class="card-panel">
-                            <i class="material-icons large indigo-text">{{ $service->icon }}</i>
-                            <h5>{{ $service->title }}</h5>
-                            <p>{{ $service->description }}</p>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
+    {{--<section class="section grey lighten-4 center">--}}
+        {{--<div class="container">--}}
+            {{--<div class="row">--}}
+                {{--<h4 class="section-heading">Services</h4>--}}
+            {{--</div>--}}
+            {{--<div class="row">--}}
+                {{--@foreach($services as $service)--}}
+                    {{--<div class="col s12 m4">--}}
+                        {{--<div class="card-panel">--}}
+                            {{--<i class="material-icons large indigo-text">{{ $service->icon }}</i>--}}
+                            {{--<h5>{{ $service->title }}</h5>--}}
+                            {{--<p>{{ $service->description }}</p>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--@endforeach--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</section>--}}
 
 
     <!-- FEATURED SECTION -->
